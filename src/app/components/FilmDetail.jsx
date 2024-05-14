@@ -1,6 +1,5 @@
-// FilmDetail.js
-// FilmDetail.js
-"use client"
+
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -47,7 +46,7 @@ const FilmDetail = ({ filmId }) => {
   const { title, episode_id, director } = film;
 
   return (
-    <div className="max-w-md mx-auto pt-8 my-8 bg-white rounded-md p-6 shadow-md">
+    <div className=" max-w-md mx-auto pt-8 my-8 bg-white rounded-md p-6 shadow-md">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>
       <p className="text-gray-600">Episode: {episode_id}</p>
       <p className="text-gray-600">Director: {director}</p>
@@ -56,7 +55,11 @@ const FilmDetail = ({ filmId }) => {
         <ul>
           {characters.map((character, index) => (
             <li key={index} className="mb-2">
-              <Link href={`/pages/characters/${character.url.split("/").slice(-2)[0]}`}>
+              <Link
+                href={`/pages/characters/${
+                  character.url.split("/").slice(-2)[0]
+                }`}
+              >
                 <div className="block bg-white rounded-lg overflow-hidden shadow-md transition duration-300 hover:shadow-lg">
                   <Image
                     height={20}
@@ -77,8 +80,3 @@ const FilmDetail = ({ filmId }) => {
 };
 
 export default FilmDetail;
-
-
-
-
-
