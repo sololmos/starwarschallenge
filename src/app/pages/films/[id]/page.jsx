@@ -7,9 +7,11 @@ const FilmDetailPage = (props) => {
   var id = props.params.id;
 
   return (
-    <div className="mt-10 pt-8">
-      <h1 className="mt-10 pt-8">Film Detail Page</h1>
-      <h2 className="mt-5">Showing details for film with ID: </h2>
+    <div className="container mx-auto">
+      <div className="my-10">
+        <h1 className="text-3xl text-yellow-400 text-center pt-10 font-bold mb-4">FILM DETAIL</h1>
+      </div>
+      
       <FilmDetail filmId={id} />
     </div>
   );

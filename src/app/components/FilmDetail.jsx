@@ -46,15 +46,15 @@ const FilmDetail = ({ filmId }) => {
   const { title, episode_id, director } = film;
 
   return (
-    <div className=" max-w-md mx-auto pt-8 my-8 bg-white rounded-md p-6 shadow-md">
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
+    <div className=" max-w-md mx-auto pt-8 my-8 bg-white rounded-md p-6 shadow-md">  
+      <h2 className=" text-2xl text-center uppercase font-bold mb-4">{title}</h2>
       <p className="text-gray-600">Episode: {episode_id}</p>
       <p className="text-gray-600">Director: {director}</p>
       <div className="mt-4">
-        <h3 className="text-lg font-semibold mb-2">Characters:</h3>
+        <h3 className="text-lg text-center font-semibold mb-2">Characters:</h3>
         <ul>
           {characters.map((character, index) => (
-            <li key={index} className="mb-2">
+            <li key={index} className="m-4 py-2 ">
               <Link
                 href={`/pages/characters/${
                   character.url.split("/").slice(-2)[0]
@@ -68,7 +68,7 @@ const FilmDetail = ({ filmId }) => {
                     alt="icon character"
                     className="w-full h-40 object-cover"
                   />
-                  <h2 className="font-semibold">name: {character.name}</h2>
+                  <h2 className="font-semibold m-3 text-center uppercase ">{character.name}</h2>
                 </div>
               </Link>
             </li>

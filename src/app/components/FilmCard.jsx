@@ -13,8 +13,8 @@ const FilmCard = ({ film }) => {
         alt="icon movie" className="w-full h-40 object-cover"
         />
         <div className="p-4">
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="text-gray-600">{`Episode ${episode_id}`}</p>
+          <h3 className="text-xl text-center  font-semibold">{title}</h3>
+          <p className="text-gray-600 text-center">{`Episode ${episode_id}`}</p>
         </div>
       </div>
     </Link>

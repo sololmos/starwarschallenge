@@ -30,7 +30,8 @@ const CharacterDetail = ({ characterId }) => {
 
   return (
     <div className="max-w-md my-10 mx-auto bg-white shadow-md rounded-md p-6">
-      <h2 className="text-2xl font-bold mb-4">{name}</h2>
+       
+      <h2 className="text-2xl font-bold text-center mb-4">{name}</h2>
       <Image
         height={20}
         width={20}
@@ -39,7 +40,7 @@ const CharacterDetail = ({ characterId }) => {
         className="w-full h-40 object-cover"
       />
 
-      <div>
+      <div className="p-2">
         <p>
           <span className="font-bold">Eye Color:</span> {eye_color}
         </p>

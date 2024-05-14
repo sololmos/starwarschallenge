@@ -1,7 +1,10 @@
 "use client";
 import Link from "next/link";
-import FilmCard from "@/app/components/FilmCard";
+//import FilmCard from "@/app/components/FilmCard";
+import { lazy,Suspense} from "react";
 import { useEffect, useState } from "react";
+
+const FilmCard = lazy(()=>import("@/app/components/FilmCard"))
 
 const Films = () => {
   const [films, setFilms] = useState([]);
@@ -28,9 +31,11 @@ const Films = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <Suspense fallback={<h1 className="text-yellow-400 font-bold ">LOADING FILMS...</h1>}>
         {films.map((film) => (
           <FilmCard key={film.episode_id} film={film} />
         ))}
+        </Suspense>
       </div>
     </div>
   );

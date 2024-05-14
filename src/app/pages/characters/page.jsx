@@ -1,6 +1,10 @@
  "use client"
+
+//import CharacterCard from "@/app/components/CharacterCard";
 import React, { useState, useEffect } from "react";
-import CharacterCard from "@/app/components/CharacterCard";
+import { Suspense } from "react";
+import { lazy } from "react";
+ const CharacterCard = lazy(()=>import("@/app/components/CharacterCard"))
 
 const CharactersPage = () => {
   const [charactersToFilter, setCharactersToFilter] = useState([]);
@@ -124,9 +128,15 @@ const CharactersPage = () => {
         Showing {firstCharacterIndex} - {lastCharacterIndex} of {totalCharacters} characters
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <Suspense fallback={<h1 className="text-yellow-400 font-bold ">LOADING CHARACTERS...</h1>}>
+
         {getFilteredCharacters().slice((currentPage - 1) * charactersPerPage, currentPage * charactersPerPage).map((character, index) => (
-          <CharacterCard key={index} character={character} />
+         
+         <CharacterCard key={index} character={character} />
+         
         ))}
+        </Suspense>
+
       </div>
       <div className="flex flex-row mt-8">
         <button
@@ -137,7 +147,7 @@ const CharactersPage = () => {
           Previous Page
         </button>
 
-        <p className="font-semibold mx-auto mb-4">
+        <p className="font-semibold text-yellow-400 py-2 mx-auto ">
           Showing {firstCharacterIndex} - {lastCharacterIndex} of {totalCharacters} characters
         </p>
         <button

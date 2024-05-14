@@ -19,7 +19,7 @@ const CharacterCard = ({ character }) => {
           className="w-full h-40 object-cover"
         />
         <div className="p-4">
-          <h3 className="text-xl font-semibold">{name}</h3>
+          <h3 className="text-xl text-center font-semibold">{name}</h3>
           <p className="text-gray-600">{`Eye Color: ${eye_color}`}</p>
           <p className="text-gray-600">{`Gender: ${gender}`}</p>
         </div>

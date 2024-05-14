@@ -9,9 +9,10 @@ const CharacterPage = (props) => {
   var id = props.params.id;
 
   return (
-    <div>
-      <h1 className="mt-10 pt-10">Character Detail Page</h1>
-      <h5 className="pt-10">character page</h5>
+    <div className="pt-10">
+       
+      <h5 >character page</h5>
+      <h1 className="text-3xl text-yellow-400 text-center pt-10 font-bold mb-4">CHARACTER DETAIL</h1>
       <CharacterDetail characterId={id} />
     </div>
   );
