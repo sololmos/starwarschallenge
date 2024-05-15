@@ -5,6 +5,8 @@
 
 
 Este proyecto consiste en el desarrollo de una aplicación web dedicada a las películas de Star Wars, cumpliendo con una serie de requisitos y características establecidas.
+### Deploy :
+---> https://starwarschallenge-iota.vercel.app/
 
 ## Requerimientos
 
